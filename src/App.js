@@ -11,11 +11,22 @@ class App extends React.Component {
     age : "30",
     address : "29 Nguyen Khac Can"
   }
+
+  handClick(){
+    console.log("Click ne");
+  }
+
+  handMouse(event){
+    console.log(event);
+  }
+
+
   render() {
     return (
       <div>
-        My name is {this.state.name}
-        
+        My name is {this.state.name} and my age {this.state.age}
+        <button onClick = {this.handClick}>Click me</button>
+        <button onMouseOver = {this.handMouse}>Hover me</button>
       </div>
     );
   }
