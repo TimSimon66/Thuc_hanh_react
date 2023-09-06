@@ -12,8 +12,13 @@ class App extends React.Component {
     address : "29 Nguyen Khac Can"
   }
 
-  handClick(){
-    console.log("Click ne");
+  handClick = (event) => {
+    console.log("Click ne", this.state.name);
+
+    this.setState({
+      name : "HarryPoteric",
+      age : Math.floor((Math.random() * 100) + 1),
+    })
   }
 
   handMouse(event){
@@ -31,6 +36,18 @@ class App extends React.Component {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const App = () => {
 //   const count = useSelector((state) => state.counter.count);
