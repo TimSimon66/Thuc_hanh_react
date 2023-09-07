@@ -5,15 +5,23 @@ import { increaseCounter, decreaseCounter } from "./redux/action/counterAction";
 import MyComponent from "./components/MyComponenet";
 import React from "react";
 import UserInfo from "./components/UserInfo";
+import DisplayInfo from "./components/DisplayInfo";
 
 class App extends React.Component {
 
-
   render() {
+
     return (
+
       <div>
-      <UserInfo/>
+        <UserInfo />
+        <br></br>
+        <br></br>
+        <DisplayInfo name = "Hoi dan IT" age = "30"/>  
+        <hr></hr>
+        <DisplayInfo name = "Eric" age = "26"/>  
       </div>
+
     );
   }
 }
