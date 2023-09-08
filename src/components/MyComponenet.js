@@ -1,13 +1,25 @@
 import React from "react";
+import UserInfo from "./UserInfo";
+import DisplayInfo from "./DisplayInfo";
 
 class MyComponent extends React.Component {
   //JSX
+  state = {
+    listUser : [
+      {id : 1, name : "TimSimon66", age : "20"},
+      {id : 2, name : "Eniqueen", age : "30"},
+      {id : 3, name : "VanTin", age : "25"},
+
+    ]
+  }
+  // DRY : don't repeat yourself
   render() {
     return (
       <div>
-
-        <h1>Hello World!</h1>
-        {Math.random()}
+      <UserInfo></UserInfo>
+      <br />
+      <br />
+      <DisplayInfo user = {this.state.listUser}></DisplayInfo>
       </div>
     );
   }

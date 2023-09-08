@@ -9,17 +9,23 @@ import DisplayInfo from "./components/DisplayInfo";
 
 class App extends React.Component {
 
+  state = {
+    listUser : [
+      {id : 1, name : "TimSimon66", age : "20"},
+      {id : 2, name : "Eniqueen", age : "30"},
+      {id : 3, name : "VanTin", age : "25"},
+
+    ]
+  }
+
+  
   render() {
+
 
     return (
 
       <div>
-        <UserInfo />
-        <br></br>
-        <br></br>
-        <DisplayInfo name = "Hoi dan IT" age = "30"/>  
-        <hr></hr>
-        <DisplayInfo name = "Eric" age = "26"/>  
+        <MyComponent></MyComponent>
       </div>
 
     );
