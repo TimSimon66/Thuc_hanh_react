@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { increaseCounter, decreaseCounter } from "./redux/action/counterAction";
 import MyComponent from "./components/MyComponenet";
 import React from "react";
-import UserInfo from "./components/UserInfo";
+import AddUserInfo from "./components/AddUserInfo";
 import DisplayInfo from "./components/DisplayInfo";
 
 class App extends React.Component {
