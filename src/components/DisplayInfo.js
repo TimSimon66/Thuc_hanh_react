@@ -1,5 +1,5 @@
 import React from "react";
-import "./css.css";
+import "./DisplayInfor.scss";
 class DisplayInfo extends React.Component {
 
   state = {
@@ -19,7 +19,7 @@ class DisplayInfo extends React.Component {
     // const user = this.props.user;
     console.log(user);
     return (
-      <div>
+      <div className="display-infor-container">
 
          <div> Click here to {this.state.changeListUser ? "hide" : "display"} list user <button onClick={this.handClickChange}>Click</button></div>
 
