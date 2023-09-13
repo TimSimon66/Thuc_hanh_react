@@ -24,7 +24,7 @@ class DisplayInfo extends React.Component {
         <img src = {logo} className="logo"/>
          <div> Click here to {this.state.changeListUser ? "hide" : "display"} list user <button onClick={this.handClickChange}>Click</button></div>
 
-      {this.state.changeListUser && <div>
+      {this.state.changeListUser && <>
         {user.map((item, index) => {
           console.log(index);
 
@@ -38,7 +38,7 @@ class DisplayInfo extends React.Component {
             
           );
         })}
-      </div>}
+      </>}
       </div>
     );
   }

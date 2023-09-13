@@ -24,7 +24,7 @@ class App extends React.Component {
 
     return (
 
-      <div>
+      <div className="app-container">
         <MyComponent></MyComponent>
       </div>
 
