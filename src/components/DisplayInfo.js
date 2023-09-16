@@ -3,9 +3,14 @@ import "./DisplayInfor.scss";
 import logo from "./../logo.svg"
 class DisplayInfo extends React.Component {
 
-  state = {
-    changeListUser : true
+  constructor(props) {
+    super(props);
+    this.state = {
+      changeListUser : true
+    }
   }
+
+
 
 
   handClickChange = () => {
