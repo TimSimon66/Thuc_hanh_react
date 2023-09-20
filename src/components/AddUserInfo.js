@@ -28,19 +28,19 @@ class AddUserInfo extends React.Component {
     this.setState({
       name: event.target.value,
     });
-    console.log(event, event.target.value);
+    // console.log(event, event.target.value);
   };
 
   handOnChangeAge = (event) => {
     this.setState({
       age: event.target.value,
     });
-    console.log(event, event.target.value);
+    // console.log(event, event.target.value);
   };
 
   handOnSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
 
     this.props.handleNewUser({
       id: Math.floor((Math.random() * 100)+ 1) + "random",

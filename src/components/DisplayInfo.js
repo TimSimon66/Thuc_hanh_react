@@ -4,6 +4,7 @@ import logo from "./../logo.svg"
 class DisplayInfo extends React.Component {
 
   constructor(props) {
+    console.log(">>> call me constructor: 1")
     super(props);
     this.state = {
       changeListUser : true
@@ -20,10 +21,26 @@ class DisplayInfo extends React.Component {
   }
 
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log('>> Call me didUpdate', this.props, prevProps)
+    if(this.props.user !== prevProps.user) {
+      if(this.props.user.length === 5){
+        alert("You got 5 user")
+      }
+  }
+}
+  componentDidMount(){
+    console.log('>> Call me didMont')
+    setTimeout(() => {
+      document.title = "Tim Hudson"
+    }, 3000)
+  }
+
   render() {
+    console.log('>> Call me render')
     const { user } = this.props;
     // const user = this.props.user;
-    console.log(user);
+    // console.log(user);
     return (
       <div className="display-infor-container">
         {/* <img src = {logo} className="logo"/> */}
@@ -31,7 +48,7 @@ class DisplayInfo extends React.Component {
 
       {this.state.changeListUser && <>
         {user.map((item, index) => {
-          console.log(user);
+          {/* console.log(user); */}
 
           return (
     
