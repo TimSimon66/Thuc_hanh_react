@@ -37,6 +37,7 @@ import logo from "./../logo.svg"
 
 const DisplayInfo = (props) => {
   const { user } = props;
+  console.log(user)
   
   const[hideShowUser, setHideShowUser] = useState(true);
 

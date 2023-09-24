@@ -7,30 +7,31 @@ import React from "react";
 import AddUserInfo from "./components/AddUserInfo";
 import DisplayInfo from "./components/DisplayInfo";
 
-class App extends React.Component {
+// class App extends React.Component {
 
-  state = {
-    listUser : [
-      {id : 1, name : "TimSimon66", age : "20"},
-      {id : 2, name : "Eniqueen", age : "30"},
-      {id : 3, name : "VanTin", age : "25"},
+//   state = {
+//     listUser : [
+//       {id : 1, name : "TimSimon66", age : "20"},
+//       {id : 2, name : "Eniqueen", age : "30"},
+//       {id : 3, name : "VanTin", age : "25"},
 
-    ]
-  }
+//     ]
+//   }
 
   
-  render() {
+//   render() {
 
 
-    return (
+//     return (
 
-      <div className="app-container">
-        <MyComponent></MyComponent>
-      </div>
+//       <div className="app-container">
+//         <MyComponent></MyComponent>
+//       </div>
 
-    );
-  }
-}
+//     );
+//   }
+// }
+
 
 // const App = () => {
 //   const count = useSelector((state) => state.counter.count);
@@ -50,5 +51,28 @@ class App extends React.Component {
 //     </div>
 //   );
 // };
+
+const App = (props) => {
+
+
+
+  // state = {
+  //   listUser : [
+  //     {id : 1, name : "TimSimon66", age : "20"},
+  //     {id : 2, name : "Eniqueen", age : "30"},
+  //     {id : 3, name : "VanTin", age : "25"},
+
+  //   ]
+  // }
+
+    return (
+
+      <div className="app-container">
+        <MyComponent></MyComponent>
+      </div>
+
+    );
+  
+}
 
 export default App;
