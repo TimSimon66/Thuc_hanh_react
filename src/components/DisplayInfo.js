@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DisplayInfor.scss";
 import logo from "./../logo.svg"
 // class DisplayInfo extends React.Component {
@@ -37,13 +37,31 @@ import logo from "./../logo.svg"
 
 const DisplayInfo = (props) => {
   const { user } = props;
-  console.log(user)
+  // console.log(user)
   
   const[hideShowUser, setHideShowUser] = useState(true);
 
   const handlShowHideListUser = () => {
     setHideShowUser(!hideShowUser);
   }
+
+  console.log(">> Call me render")
+
+  useEffect(
+    () => {
+    // setTimeout(() => {
+    //   document.title = "Eric & Hoi Dan IT"
+    // }, 3000)
+
+    if(user.length === 0){
+        alert("You deleted all the user");
+  }
+
+  console.log(">> Call me useEffect")
+  
+  }, [user]
+  );
+
 
     return (
       <div className="display-infor-container">
