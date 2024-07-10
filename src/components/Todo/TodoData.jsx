@@ -1,11 +1,11 @@
-import "/"
 
-
-const TodoData = () => {
-
+const TodoData = (props) => {
+    console.log("check, ", props);
+    const { name, address, age, phone } = props;
     return (
-        <div className="input-new">
-            <div>Hello world</div>
+        <div className="todo-data">
+            <div>My name is {name}</div>
+            <div>{JSON.stringify(props)}</div>
         </div>
     )
 }
