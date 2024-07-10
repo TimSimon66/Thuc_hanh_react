@@ -1,22 +1,21 @@
-import logo from "./logo.svg";
-import "./App.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { increaseCounter, decreaseCounter } from "./redux/action/counterAction";
-import MyComponent from "./components/MyComponenet";
+import TodoData from "./components/Todo/TodoData";
+import TodoNew from "./components/Todo/TodoNew";
 import React from "react";
-import AddUserInfo from "./components/AddUserInfo";
-import DisplayInfo from "./components/DisplayInfo";
+import './components/Todo/todo.css';
+
 
 
 
 const App = (props) => {
 
-
-
-
   return (
-
-    <div>Hello world</div>
+    <>
+      <div className="todo-container">
+        <div className="todo-title">Todo list</div>
+        <TodoNew></TodoNew>
+        <TodoData></TodoData>
+      </div>
+    </>
 
   );
 
